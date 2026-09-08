@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    background-color: hsl(218, 100%, 97%);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    gap: 100px;
+    padding: 10px;
+    width: 828px;
+    height: 573px;
+}
+
+.sidebar {
+    background: url(./assets/images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+}
+
+.step {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.step-num {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.step-info {
+    font-weight: 600;
+}
+
+.stepflow-circle {
+    border: 1px solid white;
+    width: fit-content;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    width: 100%;
+}
+
+.heading {
+    color: hsl(213, 96%, 18%);
+}
+
+.text {
+    color: hsl(231, 11%, 63%);
+    margin: 5px 0px;
+}
+
+#step1-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.label {
+    margin-bottom: 5px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 450;
+}
+
+.step1-input {
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid hsl(229, 24%, 87%);
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.step1-input::placeholder {
+    font-weight: 300;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+}
+
+.next-btn {
+    width: 30%;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    border: none;
+    background-color: hsl(213, 96%, 18%);
+    padding: 15px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+
+.plan-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 40px 0px;
+    gap: 10px;
+}
+
+.payment-plan {
+    flex: 1;
+    border: 1px solid hsl(231, 11%, 63%);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.plan-img {
+    margin-bottom: 40px;
+}
+
+.payment-title {
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.payment-price {
+    color: hsl(231, 11%, 63%);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.plan-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: hsl(218, 100%, 97%);
+    padding: 10px 0px;
+    margin-bottom: 80px;
+}
+
+.switch {
+    display: inline-block;
+    background-color: hsl(213, 96%, 18%);
+    height: 20px;
+    width: 40px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 200px;
+    transition: 0.2s;
+}
+
+.switch::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 2.5px;
+    transition: 0.2s;
+}
+
+input:checked+.switch {
+    background-color: hsl(213, 96%, 18%);
+}
+
+input:checked+.switch::before {
+    transform: translateX(20px);
+}
+
+#check {
+    display: none;
+}

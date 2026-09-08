@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+    <!-- Sidebar start -->
+    <section class="sidebar">
+      <div class="step">
+        <div class="stepflow-circle">1</div>
+        <div class="stepflow-text">
+          <p class="step-num">STEP 1</p>
+          <p class="step-info">YOUR INFO</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepflow-circle">2</div>
+        <div class="stepflow-text">
+          <p class="step-num">STEP 2</p>
+          <p class="step-info">SELECT PLAN</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepflow-circle">3</div>
+        <div class="stepflow-text">
+          <p class="step-num">STEP 3</p>
+          <p class="step-info">ADD-ONS</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepflow-circle">4</div>
+        <div class="stepflow-text">
+          <p class="step-num">STEP 4</p>
+          <p class="step-info">SUMMARY</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sidebar end -->
+
+    <!-- Step 1 start -->
+    <section class="right-section" hidden>
+
+      <h1 class="heading">Personal info</h1>
+      <p class="text">Please provide your name, email address, and phone number.</p>
+      <form action="" id="step1-form">
+        <label for="" class="label">Name</label>
+        <input type="text" placeholder="e.g. Stephen King" class="step1-input">
+
+        <label for="" class="label">Email Address</label>
+        <input type="text" placeholder="e.g. stephenking@lorem.com" class="step1-input">
+
+        <label for="" class="label">Phone Number</label>
+        <input type="tel" placeholder="e.g. +1 234 567 890" class="step1-input">
+
+        <button class="next-btn">Next Step</button>
+      </form>
+    </section>
+
+    <!-- Step 1 end -->
+
+    <!-- Step 2 start -->
+    <section class="right-section" >
+      <h1 class="heading">Select your plan</h1>
+      <p class="text">You have the option of monthly or yearly billing.</p>
+
+      <div class="plan-container">
+        <div class="payment-plan">
+          <div class="plan-img"><img src="./assets/images/icon-arcade.svg" alt=""></div>
+          <p class="payment-title">Arcade</p>
+          <p class="payment-price">$9/mo</p>
+        </div>
+
+        <div class="payment-plan">
+          <div class="plan-img"><img src="./assets/images/icon-advanced.svg" alt=""></div>
+          <p class="payment-title">Advanced</p>
+          <p class="payment-price">$12/mo</p>
+        </div>
+
+        <div class="payment-plan">
+          <div class="plan-img"><img src="./assets/images/icon-pro.svg" alt=""></div>
+          <p class="payment-title">Pro</p>
+          <p class="payment-price">$15/mo</p>
+        </div>
+      </div>
+
+      <div class="plan-time">
+        <p class="duration">Monthly</p>
+        <div class="toggle">
+          <input type="checkbox" id="check">
+          <label for="check" class="switch"></label>
+        </div>
+        <p class="duration">Yearly</p>
+      </div>
+
+      <div>
+        <button>Go Back</button>
+        <button>Next Step</button>
+      </div>
+    </section>
+
+    <!-- Step 2 end -->
+
+    <!-- Step 3 start -->
+    <div hidden>
+      Pick add-ons
+      Add-ons help enhance your gaming experience.
+
+      Online service
+      Access to multiplayer games
+      +$1/mo
+
+      Larger storage
+      Extra 1TB of cloud save
+      +$2/mo
+
+      Customizable Profile
+      Custom theme on your profile
+      +$2/mo
+
+      Go Back
+      Next Step
+
+      <!-- Step 3 end -->
+
+      <!-- Step 4 start -->
+
+      Finishing up
+      Double-check everything looks OK before confirming.
+
+      <!-- Dynamically add subscription and add-on selections here -->
+
+      Total (per month/year)
+
+      Go Back
+      Confirm
+
+      <!-- Step 4 end -->
+
+      <!-- Step 5 start -->
+
+      Thank you!
+
+      Thanks for confirming your subscription! We hope you have fun
+      using our platform. If you ever need support, please feel free
+      to email us at support@loremgaming.com.
+    </div>
+    <!-- Step 5 end -->
+  </div>
+</body>
+
+</html>
