@@ -33,6 +33,7 @@ body {
     flex-direction: column;
     gap: 30px;
     padding: 30px;
+    width: 50%;
 }
 
 .step {
@@ -61,11 +62,23 @@ body {
     justify-content: center;
 }
 
+.selected-step{
+    background-color: hsl(206, 94%, 87%);
+    color: hsl(213, 96%, 18%);
+    border: none;
+}
+
 .right-section {
     padding-top: 40px;
     padding-bottom: 10px;
     padding-right: 50px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section[hidden]{
+    display: none;
 }
 
 .heading {
@@ -74,18 +87,31 @@ body {
 
 .text {
     color: hsl(231, 11%, 63%);
-    margin: 5px 0px;
+    margin: 10px 0px;
 }
 
 #step1-form {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    height: 100%;
+}
+
+.label-div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .label {
-    margin-bottom: 5px;
     color: hsl(213, 96%, 18%);
+    font-weight: 450;
+    font-size: 14px;
+}
+
+.required{
+    color: hsl(354, 84%, 57%);
+    font-size: 14px;
     font-weight: 450;
 }
 
@@ -95,6 +121,10 @@ body {
     border: 1px solid hsl(229, 24%, 87%);
     padding-left: 20px;
     margin-bottom: 30px;
+}
+
+.step1-input:focus{
+    outline: 1px solid hsl(243, 100%, 62%);
 }
 
 .step1-input::placeholder {
@@ -113,9 +143,12 @@ body {
     border-radius: 10px;
     font-size: 16px;
     margin-left: auto;
-    margin-top: 50px;
 }
 
+.next-btn:hover{
+    cursor: pointer;
+    background-color: hsl(213, 96%, 25%);
+}
 
 .plan-container {
     display: flex;
@@ -131,19 +164,45 @@ body {
     border: 1px solid hsl(231, 11%, 63%);
     border-radius: 10px;
     padding: 20px;
+    width: max-content;
+}
+
+.months-free{
+    font-size: 14px;
+    color: hsl(213, 96%, 18%);
+    margin-top: 5px;
+}
+
+.payment-plan:hover{
+    border: 1px solid hsl(243, 100%, 62%);
+    cursor: pointer;
+}
+
+.selected-pay-plan{
+    background-color: hsl(218, 100%, 97%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.duration {
+    color: hsl(231, 11%, 63%);
+}
+
+.selected-duration-option{
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
 }
 
 .plan-img {
     margin-bottom: 40px;
 }
 
-.payment-title {
+.sub-title {
     color: hsl(213, 96%, 18%);
     font-weight: 600;
     font-size: 18px;
 }
 
-.payment-price {
+.sub-text {
     color: hsl(231, 11%, 63%);
     font-size: 14px;
     margin-top: 5px;
@@ -157,7 +216,6 @@ body {
     gap: 20px;
     background-color: hsl(218, 100%, 97%);
     padding: 10px 0px;
-    margin-bottom: 80px;
 }
 
 .switch {
@@ -192,4 +250,201 @@ input:checked+.switch::before {
 
 #check {
     display: none;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+#next2 {
+    margin: 0;
+}
+
+.back-btn {
+    width: auto;
+    font-family: "Ubuntu", sans-serif;
+    border: none;
+    background: transparent;
+    color: hsl(231, 11%, 63%);
+    padding: 15px 0px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.back-btn:hover{
+    color: hsl(213, 96%, 18%);
+    cursor: pointer;
+}
+
+.add-on-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 40px 0px;
+    gap: 10px;
+}
+
+.add-on {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid hsl(231, 11%, 63%);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.selected-add-on{
+    background-color: hsl(218, 100%, 97%);
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.add-on:hover{
+    border: 1px solid hsl(243, 100%, 62%);
+    cursor: pointer;
+}
+
+.add-on-checkbox{
+    width: 20px;
+    height: 20px;
+    accent-color: hsl(243, 100%, 62%);
+    pointer-events: none;
+}
+
+.add-on-pricing{
+    margin-left: auto;
+    color: hsl(243, 100%, 62%);
+}
+
+.text-container{
+    margin-left: 30px;
+}
+
+#next3{
+    margin: 0;
+}
+
+.total-text{
+    color: hsl(231, 11%, 63%);
+}
+
+#next3{
+    margin: 0;
+}
+
+.thank-you-head{
+    font-size: 28px;
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thank-you-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    padding-right: 50px;
+}
+
+.thank-you-container[hidden] {
+    display: none;
+}
+
+.thank-you-img{
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#thank-you-text{
+    margin: 0;
+    text-align: center;
+}
+
+#confirm-btn{
+    background-color: hsl(243, 100%, 62%);
+    margin: 0;
+}
+
+#confirm-btn:hover{
+    background-color: hsl(243, 100%, 80%);
+}
+
+#finishing-up-page{
+    display: flex;
+    flex-direction: column;
+}
+
+#finishing-up-page[hidden] {
+    display: none;
+}
+
+.total-breakdown{
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.total-pay-plan, .total-add-on {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pay-plan-title{
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.total-hr{
+   margin: 20px 0px;
+}
+
+.plan-price{
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+}
+
+.total-add-ons-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.total-add-on-text{
+    color: hsl(231, 11%, 63%);
+    font-size: 14px;
+}
+
+.total-add-on-price{
+    color: hsl(213, 96%, 18%);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.final-total{
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-text{
+    font-size: 14px;
+}
+
+.total-value{
+    font-size: 20px;
+    color: hsl(243, 100%, 62%);
+    font-weight: 600;
 }
