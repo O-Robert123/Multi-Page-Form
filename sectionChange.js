@@ -11,11 +11,17 @@ export function nextStep() {
             const selectedIconIndex = stepIcons.findIndex(icon => icon.classList.contains('selected-step'));
             rightSections[selectedStepIndex].hidden = true;
             rightSections[selectedStepIndex + 1].hidden = false;
+
+            rightSections[selectedStepIndex + 1].classList.remove('slideInRight');
+            void rightSections[selectedStepIndex + 1].offsetWidth;
+            rightSections[selectedStepIndex + 1].classList.add('slideInRight');
+
             stepIcons[selectedStepIndex].classList.remove('selected-step');
             stepIcons[selectedIconIndex + 1].classList.add('selected-step');
         }
         else {
             document.querySelector('.thank-you-container').hidden = false;
+            document.querySelector('.thank-you-container').classList.add('slideInRight');
             rightSections[selectedStepIndex].hidden = true;
         }
     }
@@ -45,6 +51,11 @@ export function previousStep() {
     const selectedIconIndex = stepIcons.findIndex(icon => icon.classList.contains('selected-step'));
     rightSections[selectedStepIndex].hidden = true;
     rightSections[selectedStepIndex - 1].hidden = false;
+
+    rightSections[selectedStepIndex - 1].classList.remove('slideInRight');
+    void rightSections[selectedStepIndex - 1].offsetWidth;
+    rightSections[selectedStepIndex - 1].classList.add('slideInLeft');
+
     stepIcons[selectedStepIndex].classList.remove('selected-step');
     stepIcons[selectedIconIndex - 1].classList.add('selected-step');
     if ((selectedStepIndex - 1) === 3) {
