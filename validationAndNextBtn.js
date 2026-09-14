@@ -9,7 +9,7 @@ const addOns = [...document.querySelectorAll('.add-on')];
 let paymentPlanObj;
 let selectedAddOns = [];
 
-export default function validate(btnIndex) {
+export function validate(btnIndex) {
     let isValid = true;
     if (btnIndex === 0) {
         for (let i = 0; i < formInputs.length; i++) {
@@ -66,7 +66,6 @@ export default function validate(btnIndex) {
         
     }
     else {
-
         stepChange.nextStep();
     }
 

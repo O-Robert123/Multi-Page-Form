@@ -1,7 +1,7 @@
-import validate from "./validationAndNextBtn.js";
+import * as validationExports from "./validationAndNextBtn.js";
 import * as stepChange from "./sectionChange.js";
 
-const rightSections = [...document.querySelectorAll('.right-section')];
+const rightSections = [...document.querySelectorAll('.full-right')];
 const stepCircles = [...document.querySelectorAll('.stepflow-circle')];
 const nextBtns = [...document.querySelectorAll('.next-btn')];
 const backBtns = [...document.querySelectorAll('.back-btn')];
@@ -19,11 +19,11 @@ nextBtns.forEach((btn, index) => {
     btn.addEventListener('click', function (event) {
         event.preventDefault();
         console.log(index);
-        validate(index);
+        validationExports.validate(index);
     });
 });
 
-backBtns.forEach((btn, index) => {
+backBtns.forEach((btn) => {
     btn.addEventListener('click', function () {
         stepChange.previousStep();
     });
@@ -49,7 +49,7 @@ durationSwitch.addEventListener('change', function () {
             if (!plan.querySelector('.months-free')) {
                 const freeMonths = document.createElement('p');
                 freeMonths.innerHTML = `<p class='months-free'>2 months free</p>`
-                plan.append(freeMonths);
+                plan.querySelector('.ALL-plan-texts').append(freeMonths);
             }
             else {
                 null;
@@ -74,4 +74,3 @@ addOns.forEach(a => {
         a.classList.toggle('selected-add-on');
     });
 });
-

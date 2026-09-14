@@ -1,8 +1,9 @@
 import { createTotal } from './total.js';
 import * as validationExports from './validationAndNextBtn.js';
 
-const rightSections = [...document.querySelectorAll('.right-section')];
+const rightSections = [...document.querySelectorAll('.full-right')];
 const stepIcons = [...document.querySelectorAll('.stepflow-circle')];
+const buttonContainers = [...document.querySelectorAll('.buttons-container')]
 
 export function nextStep() {
     const selectedStepIndex = rightSections.findIndex(sect => !sect.hidden);
@@ -18,11 +19,16 @@ export function nextStep() {
 
             stepIcons[selectedStepIndex].classList.remove('selected-step');
             stepIcons[selectedIconIndex + 1].classList.add('selected-step');
+
+            buttonContainers[selectedStepIndex].hidden = true;
+            buttonContainers[selectedStepIndex + 1].hidden = false;
         }
         else {
-            document.querySelector('.thank-you-container').hidden = false;
-            document.querySelector('.thank-you-container').classList.add('slideInRight');
             rightSections[selectedStepIndex].hidden = true;
+            document.querySelector('.thank-you-container').hidden = false;
+            document.querySelector('.thank-you-container').classList.remove('slideInRight');
+            void document.querySelector('.thank-you-container').offsetWidth;
+            document.querySelector('.thank-you-container').classList.add('slideInRight');
         }
     }
 
@@ -58,6 +64,9 @@ export function previousStep() {
 
     stepIcons[selectedStepIndex].classList.remove('selected-step');
     stepIcons[selectedIconIndex - 1].classList.add('selected-step');
+
+    buttonContainers[selectedStepIndex].hidden = true;
+    buttonContainers[selectedStepIndex - 1].hidden = false;
     if ((selectedStepIndex - 1) === 3) {
         createTotal();
     }

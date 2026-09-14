@@ -62,13 +62,13 @@ body {
     justify-content: center;
 }
 
-.selected-step{
+.selected-step {
     background-color: hsl(206, 94%, 87%);
     color: hsl(213, 96%, 18%);
     border: none;
 }
 
-.right-section {
+.full-right {
     padding-top: 40px;
     padding-bottom: 10px;
     padding-right: 50px;
@@ -77,37 +77,48 @@ body {
     flex-direction: column;
 }
 
-.right-section.slideInLeft{
-    animation: slideInRight 1s ease forwards;
+.full-right[hidden] {
+    display: none;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-right.slideInLeft {
+    animation: slideInLeft 1s ease forwards;
 }
 
 @keyframes slideInLeft {
     from {
-        transform: translateX(50px);
+        transform: translateX(-50px);
         opacity: 0;
     }
+
     to {
         transform: translateX(0%);
         opacity: 1;
     }
 }
 
-.right-section.slideInRight {
-    animation: slideInLeft 1s ease forwards;
+.full-right.slideInRight {
+    animation: slideInRight 1s ease forwards;
 }
 
 @keyframes slideInRight {
     from {
-        transform: translateX(-50px);
+        transform: translateX(50px);
         opacity: 0;
     }
+
     to {
         transform: translateX(0%);
         opacity: 1;
     }
 }
 
-.right-section[hidden]{
+.right-section[hidden] {
     display: none;
 }
 
@@ -127,7 +138,7 @@ body {
     height: 100%;
 }
 
-.label-div{
+.label-div {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
@@ -139,7 +150,7 @@ body {
     font-size: 14px;
 }
 
-.required{
+.required {
     color: hsl(354, 84%, 57%);
     font-size: 14px;
     font-weight: 450;
@@ -153,7 +164,7 @@ body {
     margin-bottom: 30px;
 }
 
-.step1-input:focus{
+.step1-input:focus {
     outline: 1px solid hsl(243, 100%, 62%);
 }
 
@@ -175,7 +186,7 @@ body {
     margin-left: auto;
 }
 
-.next-btn:hover{
+.next-btn:hover {
     cursor: pointer;
     background-color: hsl(213, 96%, 25%);
 }
@@ -197,18 +208,18 @@ body {
     width: max-content;
 }
 
-.months-free{
+.months-free {
     font-size: 14px;
     color: hsl(213, 96%, 18%);
     margin-top: 5px;
 }
 
-.payment-plan:hover{
+.payment-plan:hover {
     border: 1px solid hsl(243, 100%, 62%);
     cursor: pointer;
 }
 
-.selected-pay-plan{
+.selected-pay-plan {
     background-color: hsl(218, 100%, 97%);
     border: 1px solid hsl(243, 100%, 62%);
 }
@@ -217,7 +228,7 @@ body {
     color: hsl(231, 11%, 63%);
 }
 
-.selected-duration-option{
+.selected-duration-option {
     color: hsl(213, 96%, 18%);
     font-weight: 600;
 }
@@ -305,7 +316,7 @@ input:checked+.switch::before {
     font-weight: 500;
 }
 
-.back-btn:hover{
+.back-btn:hover {
     color: hsl(213, 96%, 18%);
     cursor: pointer;
 }
@@ -327,45 +338,45 @@ input:checked+.switch::before {
     padding: 20px;
 }
 
-.selected-add-on{
+.selected-add-on {
     background-color: hsl(218, 100%, 97%);
     border: 1px solid hsl(243, 100%, 62%);
 }
 
-.add-on:hover{
+.add-on:hover {
     border: 1px solid hsl(243, 100%, 62%);
     cursor: pointer;
 }
 
-.add-on-checkbox{
+.add-on-checkbox {
     width: 20px;
     height: 20px;
     accent-color: hsl(243, 100%, 62%);
     pointer-events: none;
 }
 
-.add-on-pricing{
+.add-on-pricing {
     margin-left: auto;
     color: hsl(243, 100%, 62%);
 }
 
-.text-container{
+.text-container {
     margin-left: 30px;
 }
 
-#next3{
+#next3 {
     margin: 0;
 }
 
-.total-text{
+.total-text {
     color: hsl(231, 11%, 63%);
 }
 
-#next3{
+#next3 {
     margin: 0;
 }
 
-.thank-you-head{
+.thank-you-head {
     font-size: 28px;
     color: hsl(213, 96%, 18%);
     margin-bottom: 10px;
@@ -373,7 +384,7 @@ input:checked+.switch::before {
     margin-right: auto;
 }
 
-.thank-you-container{
+.thank-you-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -381,7 +392,7 @@ input:checked+.switch::before {
     padding-right: 50px;
 }
 
-.thank-you-container.slideInRight{
+.thank-you-container.slideInRight {
     animation: slideInRight 1s ease forwards;
 }
 
@@ -389,27 +400,27 @@ input:checked+.switch::before {
     display: none;
 }
 
-.thank-you-img{
+.thank-you-img {
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#thank-you-text{
+#thank-you-text {
     margin: 0;
     text-align: center;
 }
 
-#confirm-btn{
+#confirm-btn {
     background-color: hsl(243, 100%, 62%);
     margin: 0;
 }
 
-#confirm-btn:hover{
+#confirm-btn:hover {
     background-color: hsl(243, 100%, 80%);
 }
 
-#finishing-up-page{
+#finishing-up-page {
     display: flex;
     flex-direction: column;
 }
@@ -418,53 +429,54 @@ input:checked+.switch::before {
     display: none;
 }
 
-.total-breakdown{
+.total-breakdown {
     background-color: hsl(231, 100%, 99%);
     border-radius: 10px;
     padding: 20px;
     margin-top: 30px;
 }
 
-.total-pay-plan, .total-add-on {
+.total-pay-plan,
+.total-add-on {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-.pay-plan-title{
+.pay-plan-title {
     color: hsl(213, 96%, 18%);
     font-weight: 600;
     margin-bottom: 5px;
 }
 
-.total-hr{
-   margin: 20px 0px;
+.total-hr {
+    margin: 20px 0px;
 }
 
-.plan-price{
+.plan-price {
     color: hsl(213, 96%, 18%);
     font-weight: 600;
 }
 
-.total-add-ons-container{
+.total-add-ons-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.total-add-on-text{
+.total-add-on-text {
     color: hsl(231, 11%, 63%);
     font-size: 14px;
 }
 
-.total-add-on-price{
+.total-add-on-price {
     color: hsl(213, 96%, 18%);
     font-size: 14px;
     font-weight: 400;
 }
 
-.final-total{
+.final-total {
     padding: 20px;
     margin-top: 10px;
     display: flex;
@@ -473,12 +485,157 @@ input:checked+.switch::before {
     justify-content: space-between;
 }
 
-.total-text{
+.total-text {
     font-size: 14px;
 }
 
-.total-value{
+.total-value {
     font-size: 20px;
     color: hsl(243, 100%, 62%);
     font-weight: 600;
+}
+
+.change-plan-link {
+    color: hsl(231, 11%, 63%);
+    text-decoration: underline;
+}
+
+.change-plan-link:hover {
+    color: hsl(243, 100%, 62%);
+    cursor: pointer;
+}
+
+
+@media (max-width: 912px) {
+    body {
+        display: block;
+        height: 100vh;
+    }
+
+    .form-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        gap: 0;
+        background-color: hsl(218, 100%, 97%);
+        height: 664px;
+    }
+
+    .sidebar {
+        width: 100%;
+        background: url(./assets/images/bg-sidebar-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        height: 25%;
+    }
+
+    .full-right {
+        height: 100%;
+        padding: 0;
+        position: relative;
+    }
+
+    .stepflow-text {
+        display: none;
+    }
+
+    .right-section {
+        width: 90%;
+        position: absolute;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        top: -10%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .step1-input {
+        margin-bottom: 15px;
+    }
+
+    .plan-container {
+        flex-direction: column;
+        align-items: unset;
+        margin: 20px 0px;
+    }
+
+    .payment-plan {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .heading {
+        font-size: 26px;
+    }
+
+    #step1-form {
+        margin-top: 10px;
+    }
+
+    .plan-container {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .add-on-container {
+        margin: 10px 0px;
+    }
+
+    .plan-texts {
+        margin-left: 20px;
+    }
+
+    .plan-img {
+        margin-bottom: 0px;
+    }
+
+    .buttons-container {
+        padding: 15px;
+        background-color: white;
+    }
+
+    .sub-title {
+        font-size: 16px;
+    }
+
+    .sub-text {
+        font-size: 12px;
+    }
+
+    .text-container {
+        margin-left: 20px;
+    }
+
+    .ALL-plan-texts {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+    }
+
+    .plan-texts {
+        margin-left: 0px;
+    }
+
+    .thank-you-container {
+        width: 90%;
+        position: absolute;
+        background-color: white;
+        border-radius: 10px;
+        padding: 90px 20px;
+        top: 11%;
+        left: 5%;
+        right: 5%;
+    }
+
+    #thank-you-text {
+        line-height: 1.5;
+        width: 90%;
+        margin: 0px auto;
+    }
 }

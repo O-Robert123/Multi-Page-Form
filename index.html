@@ -30,7 +30,7 @@
 </head>
 
 <body>
-  <div class="form-container" >
+  <div class="form-container">
     <!-- Sidebar start -->
     <section class="sidebar">
       <div class="step">
@@ -69,150 +69,165 @@
     <!-- Sidebar end -->
 
     <!-- Step 1 start -->
-    <section class="right-section">
+    <div class="full-right">
+      <section class="right-section">
 
-      <h1 class="heading">Personal info</h1>
-      <p class="text">Please provide your name, email address, and phone number.</p>
-      <form action="" id="step1-form">
-        <div class="label-div">
-          <label for="name" class="label">Name</label>
-        </div>
-        <input type="text" placeholder="e.g. Stephen King" class="step1-input" id="name" required>
+        <h1 class="heading">Personal info</h1>
+        <p class="text">Please provide your name, email address, and phone number.</p>
+        <form action="" id="step1-form">
+          <div class="label-div">
+            <label for="name" class="label">Name</label>
+          </div>
+          <input type="text" placeholder="e.g. Stephen King" class="step1-input" id="name" required>
 
-        <div class="label-div">
-          <label for="email" class="label">Email Address</label>
-        </div>
-        <input type="text" placeholder="e.g. stephenking@lorem.com" class="step1-input" id="email" required>
+          <div class="label-div">
+            <label for="email" class="label">Email Address</label>
+          </div>
+          <input type="text" placeholder="e.g. stephenking@lorem.com" class="step1-input" id="email" required>
 
-        <div class="label-div">
-          <label for="phone" class="label">Phone Number</label>
-        </div>
-        <input type="tel" placeholder="e.g. +1 234 567 890" class="step1-input" id="phone" required>
-
-        <div class="buttons-container">
-          <button class="next-btn" id="next1">Next Step</button>
-        </div>
-      </form>
-    </section>
+          <div class="label-div">
+            <label for="phone" class="label">Phone Number</label>
+          </div>
+          <input type="tel" placeholder="e.g. +1 234 567 890" class="step1-input" id="phone" required>
+        </form>
+      </section>
+      <div class="buttons-container" hidden>
+        <button class="next-btn" id="next1">Next Step</button>
+      </div>
+    </div>
 
     <!-- Step 1 end -->
 
     <!-- Step 2 start -->
-    <section class="right-section" hidden>
-      <h1 class="heading">Select your plan</h1>
-      <p class="text">You have the option of monthly or yearly billing.</p>
+    <div class="full-right" hidden>
+      <section class="right-section">
+        <h1 class="heading">Select your plan</h1>
+        <p class="text">You have the option of monthly or yearly billing.</p>
 
-      <div class="plan-container">
-        <div class="payment-plan selected-pay-plan">
-          <div class="plan-img"><img src="./assets/images/icon-arcade.svg" alt=""></div>
-          <p class="sub-title">Arcade</p>
-          <p class="sub-text" id="arcade-price">$9/mo</p>
+        <div class="plan-container">
+          <div class="payment-plan selected-pay-plan">
+            <div class="plan-img"><img src="./assets/images/icon-arcade.svg" alt=""></div>
+            <div class="ALL-plan-texts">
+              <div class="plan-texts">
+                <p class="sub-title">Arcade</p>
+                <p class="sub-text" id="arcade-price">$9/mo</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="payment-plan">
+            <div class="plan-img"><img src="./assets/images/icon-advanced.svg" alt=""></div>
+            <div class="ALL-plan-texts">
+              <div class="plan-texts">
+                <p class="sub-title">Advanced</p>
+                <p class="sub-text" id="advanced-price">$12/mo</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="payment-plan">
+            <div class="plan-img"><img src="./assets/images/icon-pro.svg" alt=""></div>
+            <div class="ALL-plan-texts">
+              <div class="plan-texts">
+                <p class="sub-title">Pro</p>
+                <p class="sub-text" id="pro-price">$15/mo</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="payment-plan">
-          <div class="plan-img"><img src="./assets/images/icon-advanced.svg" alt=""></div>
-          <p class="sub-title">Advanced</p>
-          <p class="sub-text" id="advanced-price">$12/mo</p>
+        <div class="plan-time">
+          <p class="duration selected-duration-option" id="monthly-option">Monthly</p>
+          <div class="toggle">
+            <input type="checkbox" id="check">
+            <label for="check" class="switch"></label>
+          </div>
+          <p class="duration" id="yearly-option">Yearly</p>
         </div>
-
-        <div class="payment-plan">
-          <div class="plan-img"><img src="./assets/images/icon-pro.svg" alt=""></div>
-          <p class="sub-title">Pro</p>
-          <p class="sub-text" id="pro-price">$15/mo</p>
-        </div>
-      </div>
-
-      <div class="plan-time">
-        <p class="duration selected-duration-option" id="monthly-option">Monthly</p>
-        <div class="toggle">
-          <input type="checkbox" id="check">
-          <label for="check" class="switch"></label>
-        </div>
-        <p class="duration" id="yearly-option">Yearly</p>
-      </div>
-
-      <div class="buttons-container" id="buttons-container-payment-plan">
+      </section>
+      <div class="buttons-container" id="buttons-container-payment-plan" hidden>
         <button class="back-btn">Go Back</button>
         <button class="next-btn" id="next2">Next Step</button>
       </div>
-    </section>
+    </div>
 
     <!-- Step 2 end -->
 
     <!-- Step 3 start -->
-    <section class="right-section" hidden>
-      <h1 class="heading">Pick add-ons</h1>
-      <p class="text">Add-ons help enhance your gaming experience.</p>
+    <div class="full-right" hidden>
+      <section class="right-section">
+        <h1 class="heading">Pick add-ons</h1>
+        <p class="text">Add-ons help enhance your gaming experience.</p>
 
-      <div class="add-on-container">
-        <div class="add-on">
-          <input type="checkbox" class="add-on-checkbox">
-          <div class="text-container">
-            <p class="sub-title">Online service</p>
-            <p class="sub-text">Access to multiplayer games</p>
+        <div class="add-on-container">
+          <div class="add-on">
+            <input type="checkbox" class="add-on-checkbox">
+            <div class="text-container">
+              <p class="sub-title">Online service</p>
+              <p class="sub-text">Access to multiplayer games</p>
+            </div>
+            <p class="add-on-pricing" id="online-service-price">+$1/mo</p>
           </div>
-          <p class="add-on-pricing" id="online-service-price">+$1/mo</p>
-        </div>
 
-        <div class="add-on">
-          <input type="checkbox" name="" class="add-on-checkbox">
-          <div class="text-container">
-            <p class="sub-title">Larger storage</p>
-            <p class="sub-text">Extra 1TB of cloud save</p>
+          <div class="add-on">
+            <input type="checkbox" name="" class="add-on-checkbox">
+            <div class="text-container">
+              <p class="sub-title">Larger storage</p>
+              <p class="sub-text">Extra 1TB of cloud save</p>
+            </div>
+            <p class="add-on-pricing" id="larger-storage-price">+$2/mo</p>
           </div>
-          <p class="add-on-pricing" id="larger-storage-price">+$2/mo</p>
-        </div>
 
-        <div class="add-on">
-          <input type="checkbox" name="" class="add-on-checkbox">
-          <div class="text-container">
-            <p class="sub-title">Customizable Profile</p>
-            <p class="sub-text">Custom theme on your profile</p>
+          <div class="add-on">
+            <input type="checkbox" name="" class="add-on-checkbox">
+            <div class="text-container">
+              <p class="sub-title">Customizable Profile</p>
+              <p class="sub-text">Custom theme on your profile</p>
+            </div>
+            <p class="add-on-pricing" id="customizable-profile-price">+$2/mo</p>
           </div>
-          <p class="add-on-pricing" id="customizable-profile-price">+$2/mo</p>
         </div>
-      </div>
-
-      <div class="buttons-container" id="buttons-container-add-on">
+      </section>
+      <div class="buttons-container" id="buttons-container-add-on" hidden>
         <button class="back-btn">Go Back</button>
         <button class="next-btn" id="next3">Next Step</button>
       </div>
-    </section>
+    </div>
     <!-- Step 3 end -->
 
     <!-- Step 4 start -->
-    <section class="right-section" hidden id="finishing-up-page">
-      <h1 class="title">Finishing up</h1>
-      <p class="text">Double-check everything looks OK before confirming.</p>
+    <div class="full-right" hidden>
+      <section class="right-section" id="finishing-up-page">
+        <h1 class="title">Finishing up</h1>
+        <p class="text">Double-check everything looks OK before confirming.</p>
 
-      <div class="total-breakdown">
+        <div class="total-breakdown">
 
-      </div><!-- Dynamically add subscription and add-on selections here -->
+        </div><!-- Dynamically add subscription and add-on selections here -->
 
-      <div class="final-total">
-        <p class="total-text">Total (per month/year)</p>
-        <p class="total-value">+$12/mo</p>
-      </div>
-
-      <div class="buttons-container" id="buttons-container-total-page">
+        <div class="final-total">
+          <p class="total-text">Total (per month/year)</p>
+          <p class="total-value">+$12/mo</p>
+        </div>
+      </section>
+      <div class="buttons-container" id="buttons-container-total-page" hidden>
         <button class="back-btn">Go Back</button>
         <button class="next-btn" id="confirm-btn">Confirm</button>
       </div>
-    </section>
+    </div>
     <!-- Step 4 end -->
 
     <!-- Step 5 start -->
-    <section class="thank-you-container" hidden>
-      <div class="thank-you-img"><img src="./assets/images/icon-thank-you.svg" alt=""></div>
-      <h2 class="thank-you-head">Thank you!</h2>
+      <section class="thank-you-container" hidden>
+        <div class="thank-you-img"><img src="./assets/images/icon-thank-you.svg" alt=""></div>
+        <h2 class="thank-you-head">Thank you!</h2>
 
-      <p class="text" id="thank-you-text">Thanks for confirming your subscription! We hope you have fun
-        using our platform. If you ever need support, please feel free
-        to email us at support@loremgaming.com.</p>
-  </div>
-  <!-- Step 5 end -->
-  </div>
-  <script src="./main.js" type="module"></script>
+        <p class="text" id="thank-you-text">Thanks for confirming your subscription! We hope you have fun
+          using our platform. If you ever need support, please feel free
+          to email us at support@loremgaming.com.</p>
+      </section>
+      <!-- Step 5 end -->
+      <script src="./main.js" type="module"></script>
 </body>
 
 </html>
