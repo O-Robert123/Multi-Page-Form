@@ -628,7 +628,7 @@ input:checked+.switch::before {
         background-color: white;
         border-radius: 10px;
         padding: 90px 20px;
-        top: 11%;
+        top: 14%;
         left: 5%;
         right: 5%;
     }
@@ -637,5 +637,9 @@ input:checked+.switch::before {
         line-height: 1.5;
         width: 90%;
         margin: 0px auto;
+    }
+
+    .months-free{
+        font-size: 12px;
     }
 }
