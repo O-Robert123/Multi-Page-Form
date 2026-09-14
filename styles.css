@@ -518,7 +518,7 @@ input:checked+.switch::before {
         padding: 0;
         gap: 0;
         background-color: hsl(218, 100%, 97%);
-        height: 664px;
+        height: 100vh;
     }
 
     .sidebar {
