@@ -509,7 +509,7 @@ input:checked+.switch::before {
 @media (max-width: 912px) {
     body {
         display: block;
-        height: 100vh;
+        height: auto;
     }
 
     .form-container {
